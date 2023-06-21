@@ -1,0 +1,24 @@
+{
+  "name": "xvc",
+  "version": "1.0.0",
+  "description": "discord cross voice channels",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "pnpm build && DEV=true node dist/index.js",
+    "commands:staging": "pnpm build && DEV=true node deploy.js",
+    "commands:prod": "pnpm build && node deploy.js"
+  },
+  "author": "xanderjakeq",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
+    "zod": "^3.21.4"
+  }
+}
